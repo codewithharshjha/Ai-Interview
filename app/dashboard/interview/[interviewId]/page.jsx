@@ -11,15 +11,16 @@ import Webcam from "react-webcam";
 function Interview({params}) {
     const[interviewData,setInterviewData]=useState()
     const [webcam, setWebcam] = useState(false)
+    const GetInterviewDetail=async()=>{
+      const result =await db.select().from(MockInterview).where(eq(MockInterview.mockId,params.interviewId))
+      
+    setInterviewData(result[0])
+  }
     useEffect(()=>{
 
 GetInterviewDetail()
     },[])
-    const GetInterviewDetail=async()=>{
-        const result =await db.select().from(MockInterview).where(eq(MockInterview.mockId,params.interviewId))
-        
-      setInterviewData(result[0])
-    }
+   
   return (
     <div className=' my-10'>
      <h2 className=' font-bold text-2xl'>Lets Get Started</h2>
