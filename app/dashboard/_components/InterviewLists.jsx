@@ -1,11 +1,12 @@
 "use client"
 import { db } from '@/utils/db'
-import { MockInterview } from '@/utils/schema'
+
 import { useUser } from '@clerk/nextjs'
 import { desc, eq } from 'drizzle-orm'
 import React, { useEffect, useState } from 'react'
 import InterviewItemCard from './InterviewItemCard'
 import Loader from './Loader'
+import { MockInterview } from '@/utils/schema'
 
 function InterviewLists() {
     const{user}=useUser()
@@ -14,8 +15,8 @@ function InterviewLists() {
         GetInterviewist()
     },[user])
     const GetInterviewist=async()=>{
-        const result=await db.select().from(MockInterview).where(eq(MockInterview.createdBy,user?.primaryEmailAddress?.emailAddress)).orderBy(desc(MockInterview.id))
-console.log(result)
+        const result=await db.select().from(MockInterview).where(eq(MockInterview?.createdBy,user?.primaryEmailAddress?.emailAddress)).orderBy(desc(MockInterview.id))
+
 setInterviewList(result)
     }
   return interviewList.length>0 ? (

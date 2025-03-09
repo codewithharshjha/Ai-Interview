@@ -30,7 +30,7 @@ function RecordAnswerSection({mockInterviewQuestion,activeQuestionIndex,intervie
   useEffect(()=>{
    
       
-    results?.map((result) => {
+    results?.map((result,index) => {
        setUserAnswer((prevAns) => prevAns + result );
       
     });
@@ -47,7 +47,7 @@ function RecordAnswerSection({mockInterviewQuestion,activeQuestionIndex,intervie
 
 if(isRecording){
   stopSpeechToText()
-    console.log(userAnswer)
+
  
    
   
@@ -105,8 +105,8 @@ mirrored={true}
     </div>
  <Button variant="outline"className=" my-10" onClick={StartSopRecording} disabled={loading}>
       {isRecording ?<>
-      <h2 className=' text-red-600 flex gap-2'><Mic/>'Recording'
-      </h2>
+        <h2 className=' text-red-600 flex gap-2'><Mic/>{"Recording"}</h2>
+
       </>:" Record Answer"}
      </Button>
    {/* <Button onClick={()=>console.log(userAnswer)}>Show User Answer</Button>   */}

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CircleUserIcon } from "lucide-react";
 import Image from "next/image";
 import { ModeToggle } from './ModeToggle';
-import { SignIn, SignOutButton, SignUp } from '@clerk/nextjs';
+
 import Link from 'next/link';
 function HomeHeader() {
   return (

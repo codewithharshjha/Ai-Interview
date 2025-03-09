@@ -6,7 +6,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,7 +48,7 @@ function AddNewInterview() {
       .text()
       .replace("```json", "")
       .replace("```", "");
-    console.log("this is mock resp",JSON.parse(MockJsonResp))
+  
 
     setJsonResponse(MockJsonResp);
     if (MockJsonResp) {
@@ -91,7 +91,7 @@ function AddNewInterview() {
             <DialogTitle className=" text-2xl">
               Tell us more about your job interview
             </DialogTitle>
-            <DialogDescription>
+            <DialogDescription >
               <form action="" onSubmit={onSubmit}>
                 <div>
                   <h2>Add Details about your job position/role</h2>
@@ -135,14 +135,15 @@ function AddNewInterview() {
                     Cancel
                   </Button>
                   <Button type="submit" disabled={loading}>
-                    {loading ? (
-                      <>
-                        <LoaderCircle className=" animate-spin" />
-                        "Generating from AI"
-                      </>
-                    ) : (
-                      "Start interview"
-                    )}
+                  {loading ? (
+  <>
+    <LoaderCircle className="animate-spin" />
+    {'"Generating from AI"'}
+  </>
+) : (
+  'Start interview'
+)}
+
                   </Button>
                 </div>
               </form>

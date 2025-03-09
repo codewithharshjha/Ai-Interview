@@ -10,10 +10,10 @@ import { Button } from '@/components/ui/button'
 
 function Header() {
     const path=usePathname()
-    console.log(path)
-   useEffect(()=>{
-    console.log(path)
-   },[])
+   
+  //  useEffect(()=>{
+   
+  //  },[])
   return (
     <div className=' flex p-4 items-center justify-between bg-secondary shadow-sm'>
       <Image src={"/logo.svg"} width={50}height={50} alt='logo'/>
@@ -31,7 +31,7 @@ function Header() {
       <div className=' flex items-center space-x-5'>
 
      
-      <UserButton className=" "/>
+      <UserButton />
       <ModeToggle />
      <Button>
       <SignOutButton/>

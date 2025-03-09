@@ -14,7 +14,7 @@ function Interview({params}) {
     useEffect(()=>{
 
 GetInterviewDetail()
-    },[])
+    },[GetInterviewDetail])
     const GetInterviewDetail=async()=>{
         const result =await db.select().from(MockInterview).where(eq(MockInterview.mockId,params.interviewId))
         

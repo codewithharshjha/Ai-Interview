@@ -3,7 +3,7 @@ export default defineConfig({
  schema: "./utils/schema.js",
   dialect: 'postgresql',
   dbCredentials: {
-    url: "postgresql://harshjhamusicproducer:pMm6vEVLuiU4@ep-damp-wildflower-a28cjppw.eu-central-1.aws.neon.tech/AI-Interview?sslmode=requir",
+    url: "postgresql://neondb_owner:npg_hpfVL7Rqr9uY@ep-frosty-paper-a8n7v818-pooler.eastus2.azure.neon.tech/neondb?sslmode=require",
   },
   verbose: true,
   strict: true,
