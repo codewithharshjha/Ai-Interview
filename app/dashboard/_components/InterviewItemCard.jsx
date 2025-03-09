@@ -24,7 +24,7 @@ function InterviewItemCard({interview}) {
  
     <Button size="sm" className="w-full bg-violet-600" onClick={onStart}>Start</Button>
 </div>
-      
+   
     </div>
   )
 }
