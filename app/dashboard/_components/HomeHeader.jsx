@@ -17,7 +17,7 @@ function HomeHeader() {
   
       <Button className=" text-sm gap-2"><CircleUserIcon/>  SignIn</Button>   </Link>
    <Link href={"/sign-up"}>
-   <Button className=" text-sm">SignUp</Button>
+   <Button className=" text-sm">Register</Button>
    </Link>
      
       <ModeToggle/>
