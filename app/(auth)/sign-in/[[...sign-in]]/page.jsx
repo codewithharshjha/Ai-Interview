@@ -72,7 +72,7 @@ export default function Page() {
           </a>
 
           <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-          Welcome to AI Interview Mocker Test🦑
+          Welcome to AI Interview test by admin
           </h1>
 
           <p className="mt-4 leading-relaxed text-gray-500">

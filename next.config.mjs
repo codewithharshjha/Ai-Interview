@@ -3,6 +3,7 @@ const nextConfig = {
     images: {
         domains: ['images.unsplash.com'], // Add Unsplash to the allowed domains
       },
+      output:"standalone"
 };
 
 export default nextConfig;
